@@ -3,7 +3,7 @@ from _thread import *
 import sys
 from utils import configs
 
-server = configs.get('SERVER_IP')
+server = configs.get('SERVER_IP').data
 port = 5555
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -11,7 +11,7 @@ s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 try:
     s.bind((server, port))
 except socket.error as e:
-    str(e)
+    print(str(e))
 
 s.listen(2)
 print("waiting for a connection, server started")
