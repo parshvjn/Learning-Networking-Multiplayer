@@ -50,6 +50,8 @@ def threaded_client(connection, player):
     print("lost connection")
     connection.close()
     #fix: when oen client disconnects and joins again, currentPlayer variable still adds one more and make index out of range error for finding the position when given to function (trheaded_client)
+    #add: when server closed and client open, isntead of giving random error, shoudl say server disconencted
+    #make file with all libraries requried
 
 
 currentPlayer = 0
